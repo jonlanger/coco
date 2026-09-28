@@ -1,0 +1,350 @@
+/* ==========================================================================
+   CoCo Design Tokens — v2
+   Three tiers: primitives → semantic (light / field-dark) → component.
+   Mobile-first: all sizes are defined for small screens; larger breakpoints
+   only ever scale up.
+   ========================================================================== */
+
+:root {
+  /* ---------- Primitives: Blue (brand) ---------- */
+  --blue-50: #EEF5FF;
+  --blue-100: #DCEBFF;
+  --blue-200: #B8D7FF;
+  --blue-300: #86BCFF;
+  --blue-400: #5AA8FF;   /* v1 "Secondary" — field-dark accent */
+  --blue-500: #007AFF;   /* v1 "Primary" — brand / display only */
+  --blue-600: #006FE6;   /* interactive fill (AA with white: 4.75) */
+  --blue-700: #0066D6;   /* blue text on light (AA: 5.42) */
+  --blue-800: #004FAD;
+  --blue-900: #0B1B33;
+
+  /* ---------- Primitives: Green (success) ---------- */
+  --green-100: #DDF5D6;
+  --green-200: #B8EBA9;
+  --green-300: #A6E596;  /* v1 "Success Secondary" */
+  --green-400: #62D84E;  /* v1 "Success" */
+  --green-600: #2E9E1E;
+  --green-800: #1D5C14;
+  --green-900: #0E2A0A;
+
+  /* ---------- Primitives: Yellow (warning / risk) ---------- */
+  --yellow-100: #FFF3C4;
+  --yellow-300: #F5D76E;
+  --yellow-400: #F2C200;  /* v1 "Warning" */
+  --yellow-700: #6B4F00;
+  --yellow-900: #2E2200;
+
+  /* ---------- Primitives: Orange-red (error / delayed) ---------- */
+  --red-100: #FFE6DD;
+  --red-300: #F4906A;
+  --red-400: #F24E1E;    /* v1 "Error" — decorative / large only */
+  --red-500: #D93A0B;    /* fill with white text (AA: 4.60) */
+  --red-700: #A8300B;
+
+  /* ---------- Primitives: Neutral ---------- */
+  --n-0: #FFFFFF;
+  --n-50: #F6F7F9;
+  --n-100: #EDEFF2;
+  --n-200: #DCE0E5;
+  --n-300: #C4C9D0;
+  --n-400: #9AA1AB;
+  --n-500: #6B7280;
+  --n-600: #4B5058;
+  --n-700: #3A3D42;
+  --n-800: #2A2B2E;
+  --n-850: #212121;      /* v1 "Black" card */
+  --n-900: #171717;
+  --n-950: #0E0E0F;
+
+  /* ---------- Typography ---------- */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --fs-display: clamp(2.5rem, 7vw + 1rem, 5.5rem);
+  --fs-h1: 2rem;          /* 32 */
+  --fs-h2: 1.5rem;        /* 24 */
+  --fs-h3: 1.25rem;       /* 20 */
+  --fs-title: 1.0625rem;  /* 17 */
+  --fs-body: 1rem;        /* 16 */
+  --fs-sm: 0.875rem;      /* 14 */
+  --fs-xs: 0.75rem;       /* 12 */
+  --fs-metric: 2.25rem;   /* 36 — KPI numbers */
+
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-body: 1.5;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-heavy: 800;
+
+  --tracking-tight: -0.02em;
+  --tracking-display: -0.035em;
+  --tracking-caps: 0.06em;
+
+  /* ---------- Space (4pt grid) ---------- */
+  --sp-0: 0;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --gutter: 16px;
+
+  /* ---------- Radius ---------- */
+  --r-xs: 6px;
+  --r-sm: 10px;     /* chips */
+  --r-md: 14px;     /* inputs, small cards */
+  --r-lg: 20px;     /* cards */
+  --r-xl: 28px;     /* hero cards, sheets */
+  --r-pill: 999px;
+
+  /* ---------- Touch targets ---------- */
+  --tap: 44px;        /* minimum (customer, fleet) */
+  --tap-field: 56px;  /* gloved / in-motion (driver, collector) */
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 360ms;
+
+  /* ---------- Z ---------- */
+  --z-nav: 20;
+  --z-sheet: 40;
+  --z-toast: 60;
+}
+
+/* ==========================================================================
+   Semantic — Light (default: customer, fleet manager, marketing)
+   ========================================================================== */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: var(--n-50);
+  --bg-raised: var(--n-0);
+  --surface: var(--n-0);
+  --surface-2: var(--n-100);
+  --surface-3: var(--n-200);
+  --surface-inverse: var(--n-850);
+  --border: var(--n-200);
+  --border-strong: var(--n-300);
+
+  --text: var(--n-900);
+  --text-2: var(--n-600);
+  --text-3: var(--n-500);
+  --text-inverse: var(--n-0);
+
+  --brand: var(--blue-500);
+  --accent-text: var(--blue-700);        /* blue headlines & links */
+  --primary: var(--blue-600);
+  --primary-hover: var(--blue-700);
+  --primary-ink: var(--n-0);
+  --primary-soft: var(--blue-50);
+  --primary-soft-ink: var(--blue-800);
+  --focus: var(--blue-500);
+
+  --ok: var(--green-400);
+  --ok-ink: var(--green-900);
+  --ok-soft: var(--green-100);
+  --ok-soft-ink: var(--green-800);
+  --ok-line: var(--green-600);
+
+  --warn: var(--yellow-400);
+  --warn-ink: var(--n-900);
+  --warn-soft: var(--yellow-100);
+  --warn-soft-ink: var(--yellow-700);
+
+  --danger: var(--red-500);
+  --danger-ink: var(--n-0);
+  --danger-soft: var(--red-100);
+  --danger-soft-ink: var(--red-700);
+
+  --info: var(--blue-600);
+  --info-ink: var(--n-0);
+  --info-soft: var(--blue-50);
+  --info-soft-ink: var(--blue-800);
+
+  /* Basemap: drives the vector map style (assets/js/app/basemap.js) */
+  --map-land: #E9ECEF;
+  --map-block: #DDE1E6;       /* landuse: schools, hospitals, industrial, plazas */
+  --map-building: #DADEE3;
+  --map-road: #FFFFFF;
+  --map-road-major: #FFFFFF;
+  --map-road-casing: #D3D8DE;
+  --map-rail: #C4CAD1;
+  --map-park: #D6EBD0;
+  --map-water: #CFE3F7;
+  --map-label: #8A929C;       /* street names */
+  --map-label-strong: #5B636D; /* neighborhoods, water, major roads */
+  --map-label-halo: #F4F6F8;
+  /* Navigation overlays (driver): the route ahead, later legs, road already driven */
+  --map-route: #006FE6;
+  --map-route-casing: #FFFFFF;
+  --map-route-next: #7DB4F5;
+  --map-route-done: #9AA3AD;
+
+  --shadow-1: 0 1px 2px rgb(16 24 40 / .06), 0 1px 3px rgb(16 24 40 / .08);
+  --shadow-2: 0 4px 12px rgb(16 24 40 / .08), 0 2px 4px rgb(16 24 40 / .04);
+  --shadow-3: 0 16px 40px rgb(16 24 40 / .14), 0 4px 10px rgb(16 24 40 / .06);
+  --scrim: rgb(14 14 15 / .45);
+}
+
+/* ==========================================================================
+   Semantic — Field Dark (driver in-cab, collector on-street)
+   High contrast, low glare, larger targets.
+   ========================================================================== */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: var(--n-950);
+  --bg-raised: var(--n-900);
+  --surface: var(--n-850);
+  --surface-2: var(--n-800);
+  --surface-3: var(--n-700);
+  --surface-inverse: var(--n-0);
+  --border: #33363B;
+  --border-strong: #464A50;
+
+  --text: var(--n-0);
+  --text-2: #C9CDD3;
+  --text-3: var(--n-400);
+  --text-inverse: var(--n-900);
+
+  --brand: var(--blue-400);
+  --accent-text: var(--blue-400);
+  --primary: var(--blue-400);
+  --primary-hover: var(--blue-300);
+  --primary-ink: var(--blue-900);
+  --primary-soft: rgb(90 168 255 / .14);
+  --primary-soft-ink: var(--blue-300);
+  --focus: var(--blue-300);
+
+  --ok: var(--green-300);
+  --ok-ink: var(--green-900);
+  --ok-soft: rgb(166 229 150 / .12);
+  --ok-soft-ink: var(--green-300);
+  --ok-line: var(--green-300);
+
+  --warn: var(--yellow-300);
+  --warn-ink: var(--yellow-900);
+  --warn-soft: rgb(245 215 110 / .12);
+  --warn-soft-ink: var(--yellow-300);
+
+  --danger: var(--red-300);
+  --danger-ink: #2B0A00;
+  --danger-soft: rgb(244 144 106 / .14);
+  --danger-soft-ink: var(--red-300);
+
+  --info: var(--blue-400);
+  --info-ink: var(--blue-900);
+  --info-soft: rgb(90 168 255 / .14);
+  --info-soft-ink: var(--blue-300);
+
+  --map-land: #3C3F44;
+  --map-block: #43474C;
+  --map-building: #474B51;
+  --map-road: #5E6269;
+  --map-road-major: #6B7078;
+  --map-road-casing: #34373B;
+  --map-rail: #55595F;
+  --map-park: #3F4A3E;
+  --map-water: #2F3A47;
+  --map-label: #9AA1AB;
+  --map-label-strong: #C9CED5;
+  --map-label-halo: #3C3F44;
+  --map-route: #3D9BFF;
+  --map-route-casing: #0B2A4D;
+  --map-route-next: #3F6FA8;
+  --map-route-done: #7A8089;
+
+  --shadow-1: 0 1px 2px rgb(0 0 0 / .4);
+  --shadow-2: 0 6px 16px rgb(0 0 0 / .45);
+  --shadow-3: 0 18px 44px rgb(0 0 0 / .55);
+  --scrim: rgb(0 0 0 / .6);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 24px;
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  :root { --gutter: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-1: 0ms; --dur-2: 0ms; --dur-3: 0ms; }
+}
+
+/* ==========================================================================
+   Accessibility preferences — set on <html> by assets/js/app/prefs.js
+   ========================================================================== */
+/* Text size: everything type-related is in rem, so scaling the root scales the UI */
+:root[data-text="lg"] { font-size: 112.5%; }
+:root[data-text="xl"] { font-size: 125%; }
+
+/* High contrast: stronger secondary text, visible borders, heavier focus */
+:root[data-contrast],
+:root[data-contrast] [data-theme="light"] {
+  --text-2: var(--n-800);
+  --text-3: var(--n-700);
+  --border: var(--n-500);
+  --border-strong: var(--n-700);
+  --surface-2: var(--n-100);
+  --focus: var(--blue-800);
+  --accent-text: var(--blue-800);
+  --shadow-1: 0 0 0 1px var(--n-500);
+  --map-label: var(--n-700);
+  --map-label-strong: var(--n-900);
+  --map-road-casing: var(--n-400);
+  --map-route: var(--blue-800);
+  --map-route-casing: #fff;
+}
+:root[data-contrast] [data-theme="dark"] {
+  --bg: #000;
+  --surface: #161616;
+  --text-2: var(--n-0);
+  --text-3: var(--n-200);
+  --border: var(--n-400);
+  --border-strong: var(--n-200);
+  --focus: var(--yellow-300);
+  --shadow-1: 0 0 0 1px var(--n-400);
+  --map-label: var(--n-200);
+  --map-label-strong: var(--n-0);
+  --map-label-halo: #000;
+  --map-route: #5AB0FF;
+  --map-route-casing: #000;
+}
+:root[data-contrast] :focus-visible { outline-width: 4px; outline-offset: 3px; }
+:root[data-contrast] .chip { box-shadow: inset 0 0 0 1.5px currentColor; }
+
+/* Larger touch targets: 56px minimum everywhere (matches field roles) */
+:root[data-targets] { --tap: 56px; }
+:root[data-targets] .btn { --_h: 56px; }
+:root[data-targets] .btn--sm { --_h: 48px; }
+:root[data-targets] .icon-btn--sm { width: 48px; height: 48px; }
+:root[data-targets] .segmented button { min-height: 48px; }
+:root[data-targets] .list-item { min-height: 68px; }
+:root[data-targets] .input, :root[data-targets] .select { min-height: 56px; }
+:root[data-targets] .tabbar a, :root[data-targets] .tabbar button { min-height: 60px; }
+
+/* Underline links so they don't rely on color alone */
+:root[data-underline] a:not([class]), :root[data-underline] .link { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Reduce motion (in-app override on top of the OS setting) */
+:root[data-motion="reduce"] { --dur-1: 0ms; --dur-2: 0ms; --dur-3: 0ms; }
+:root[data-motion="reduce"] *, :root[data-motion="reduce"] *::before, :root[data-motion="reduce"] *::after {
+  animation-duration: 1ms !important; animation-iteration-count: 1 !important;
+  transition-duration: 1ms !important; scroll-behavior: auto !important;
+}

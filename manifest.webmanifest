@@ -1,0 +1,9 @@
+{
+  "name": "CoCo — Combination Collection Services",
+  "short_name": "CoCo",
+  "start_url": "./login/",
+  "display": "standalone",
+  "background_color": "#F6F7F9",
+  "theme_color": "#007AFF",
+  "icons": [{ "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

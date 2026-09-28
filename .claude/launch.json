@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "coco",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "/Users/jonlanger/Documents/Projects/coco/scripts/serve.py",
+        "5173"
+      ],
+      "port": 5173
+    },
+    {
+      "name": "coco-5174",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "/Users/jonlanger/Documents/Projects/coco/scripts/serve.py",
+        "5174"
+      ],
+      "port": 5174
+    }
+  ]
+}

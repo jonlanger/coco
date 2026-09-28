@@ -1,0 +1,11 @@
+{
+  "name": "coco",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CoCo — Combination Collection Services. Homepage, design system and interactive prototype.",
+  "scripts": {
+    "dev": "python3 scripts/serve.py 5173",
+    "check": "for f in assets/js/*.js assets/js/app/*.js; do node --check $f || exit 1; done && echo ok"
+  }
+}

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F6F7F9">
+  <title>CoCo — Every pickup, connected</title>
+  <meta name="description" content="CoCo is the connected operations platform for waste collection — customers, drivers, collectors and fleet managers on one live data layer.">
+  <meta property="og:title" content="CoCo — Every pickup, connected">
+  <meta property="og:description" content="The connected operations platform for waste collection.">
+  <meta property="og:image" content="assets/img/truck-iso.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <!-- NAV -->
+  <header class="nav" data-nav>
+    <div class="wrap nav__in">
+      <a class="logo" href="./"><span class="logo__mark">Co</span>CoCo</a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#platform">Platform</a>
+        <a href="#story">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#roles">Solutions</a>
+      </nav>
+      <div class="nav__end">
+        <a class="btn btn--sm btn--ghost nav__signin" href="login/">Sign in</a>
+        <a class="btn btn--sm" href="customer/#/welcome">Get started</a>
+        <button class="icon-btn icon-btn--ghost nav__burger" aria-label="Open menu" aria-expanded="false" data-burger><span data-i="menu"></span></button>
+      </div>
+    </div>
+    <div class="nav__sheet" data-sheet>
+      <a href="#platform">Platform</a><a href="#story">How it works</a><a href="#features">Features</a><a href="#roles">Solutions</a>
+      <a class="btn btn--lg btn--block btn--secondary" href="login/">Sign in</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <h1 aria-label="Every pickup, connected.">
+            <span class="line"><span class="w" style="--i:0">Every</span> <span class="w" style="--i:1">pickup,</span></span>
+            <span class="line"><span class="w accent" style="--i:2">connected.</span></span>
+          </h1>
+          <p class="lede">CoCo puts customers, drivers, collectors and fleet managers on one live data layer. Every request, route, scan and status change reaches everyone who needs it — the moment it happens.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--lg" href="customer/#/welcome">Get started <span data-i="arrow-right"></span></a>
+            <a class="btn btn--lg btn--secondary" href="#story"><span data-i="play"></span>See how it works</a>
+          </div>
+          <div class="hero__trust"><span><span data-i="check-circle"></span>4 role-specific apps</span><span><span data-i="check-circle"></span>One shared data layer</span><span><span data-i="check-circle"></span>Photo-verified pickups</span></div>
+        </div>
+
+        <div class="ops" data-ops role="img" aria-label="Animated operations map: a truck completes its route while live events stream to every role">
+          <svg viewBox="0 0 640 560" preserveAspectRatio="xMidYMid slice" data-ops-svg></svg>
+          <div class="ops__hud">
+            <span class="ops__tag"><i></i>Truck 0091 · Back Bay</span>
+            <div class="ops__tag ops__count"><strong data-ops-count>0/8</strong><small>stops complete</small><div class="ops__bar"><span data-ops-bar></span></div></div>
+          </div>
+          <div class="ops__feed" data-ops-feed aria-live="off"></div>
+          <button class="ops__pause" data-ops-pause aria-label="Pause animation"><span data-i="pause"></span></button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- STATEMENT -->
+    <section class="statement" data-statement>
+      <div class="wrap">
+        <p>Customers don't leave because of a missed pickup. They leave because <span class="accent-group">nobody told them.</span></p>
+        <cite>— What we heard in discovery research</cite>
+      </div>
+    </section>
+
+    <!-- PLATFORM / HUB -->
+    <section class="sec" id="platform" style="padding-top:0">
+      <div class="wrap hub" data-hub>
+        <div>
+          <div class="sec__head" style="margin-bottom:0">
+            <span class="eyebrow" data-reveal>The platform</span>
+            <h2 class="h-xl" data-reveal style="--i:1">One data layer. Four apps. Zero blind spots.</h2>
+            <p class="lede" data-reveal style="--i:2">Most operations run on disconnected tools — a dispatch system here, a spreadsheet there, a phone call when something breaks. CoCo gives every role its own focused app, built on the same live records.</p>
+          </div>
+          <div class="hub__points">
+            <div class="hub__point" data-reveal style="--i:3"><span class="ic" data-i="activity"></span><div><p class="t-title">Real-time by default</p><p class="t-sm t-muted">A scan on the street updates the customer's tracker and the fleet dashboard in the same second.</p></div></div>
+            <div class="hub__point" data-reveal style="--i:4"><span class="ic" data-i="shield-check"></span><div><p class="t-title">Compliance built into the work</p><p class="t-sm t-muted">Checklists, barcode verification and photo proof happen inside the pickup — not in a report afterwards.</p></div></div>
+            <div class="hub__point" data-reveal style="--i:5"><span class="ic" data-i="alert"></span><div><p class="t-title">Risk surfaces first</p><p class="t-sm t-muted">Managers open on what needs attention — maintenance, certifications, delays — before the numbers.</p></div></div>
+          </div>
+        </div>
+        <div class="hub__vis" data-reveal="scale">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <path class="hub__line" pathLength="100" vector-effect="non-scaling-stroke" d="M50 50 Q30 26 16 11"/>
+            <path class="hub__line" pathLength="100" vector-effect="non-scaling-stroke" d="M50 50 Q70 26 84 11"/>
+            <path class="hub__line" pathLength="100" vector-effect="non-scaling-stroke" d="M50 50 Q30 74 16 81"/>
+            <path class="hub__line" pathLength="100" vector-effect="non-scaling-stroke" d="M50 50 Q70 74 84 81"/>
+            <path class="hub__flow" pathLength="100" vector-effect="non-scaling-stroke" style="--i:0" d="M16 11 Q30 26 50 50"/>
+            <path class="hub__flow" pathLength="100" vector-effect="non-scaling-stroke" style="--i:1" d="M50 50 Q70 26 84 11"/>
+            <path class="hub__flow" pathLength="100" vector-effect="non-scaling-stroke" style="--i:2" d="M50 50 Q70 74 84 81"/>
+            <path class="hub__flow" pathLength="100" vector-effect="non-scaling-stroke" style="--i:3" d="M16 81 Q30 74 50 50"/>
+          </svg>
+          <div class="hub__core"><div><small>CoCo</small><strong>Live data layer</strong></div></div>
+          <div class="hub__node"><img src="assets/img/persona-customer.jpg" alt=""><b>Customers</b><span>Request · track · confirm</span></div>
+          <div class="hub__node"><img src="assets/img/persona-driver.jpg" alt=""><b>Drivers</b><span>Navigate · coordinate</span></div>
+          <div class="hub__node"><img src="assets/img/persona-collector.jpg" alt=""><b>Collectors</b><span>Scan · verify · flag</span></div>
+          <div class="hub__node"><img src="assets/img/persona-fleet-manager.jpg" alt=""><b>Fleet managers</b><span>Oversee · prevent risk</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="sec" id="story" style="background:var(--surface)">
+      <div class="wrap">
+        <div class="sec__head">
+          <span class="eyebrow" data-reveal>How it works</span>
+          <h2 class="h-xl" data-reveal style="--i:1">One pickup. Four perspectives.</h2>
+        </div>
+        <div class="story">
+          <div class="story__stage" aria-hidden="true">
+            <div class="story__hud"><div class="story__who" data-who></div><div class="story__prog" data-prog><span></span><span></span><span></span><span></span></div></div>
+            <div class="phone" data-stage><div class="story__handoff" data-handoff></div></div>
+          </div>
+          <div class="story__steps">
+
+            <article class="story__step" data-step>
+              <span class="story__num">01 — REQUEST</span>
+              <span class="story__role"><img src="assets/img/persona-customer.jpg" alt="">Customer app</span>
+              <h3>Book a pickup in under two minutes.</h3>
+              <p class="lede">One-time or recurring, trash to hazardous. A photo gives an instant size and weight estimate, so the right truck shows up.</p>
+              <ul><li><span data-i="check"></span>Five-step request with photo estimate</li><li><span data-i="check"></span>Live price and time windows</li><li><span data-i="check"></span>Approved and routed automatically</li></ul>
+              <div class="phone"><div class="mini" data-theme="light">
+                <div class="row row--between mini-in" style="--d:0"><span class="logo" style="font-size:1.1rem"><span class="logo__mark" style="width:28px;height:28px;font-size:.8rem;border-radius:8px">Co</span>CoCo</span><span class="t-xs t-subtle">5/5</span></div>
+                <div class="stepper mini-in" style="--d:1"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span></div>
+                <p class="mini__big mini-in" style="--d:2">Confirm Pick Up Request</p>
+                <div class="row row--wrap mini-in" style="--gap:6px;--d:3"><span class="chip chip--ok" data-ci="check">My default address</span><span class="chip chip--ok" data-ci="check">One-time</span><span class="chip chip--ok" data-ci="check">Bulk item</span><span class="chip chip--ok" data-ci="check">7 – 11 AM</span></div>
+                <div class="mini-in" style="--d:4;border-radius:18px;overflow:hidden;flex:1;min-height:120px"><img src="assets/img/house-bags.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+                <div class="card row mini-in" style="--d:5;--gap:10px;padding:12px"><span class="list-item__icon" data-i="sparkle"></span><div><p class="t-sm" style="font-weight:700">Estimated 3 bags · ~35 lbs</p><p class="t-xs t-subtle">Fits a standard pickup</p></div></div>
+                <span class="btn btn--block mini-in" style="--d:6">Confirm Pick Up</span>
+              </div></div>
+            </article>
+
+            <article class="story__step" data-step>
+              <span class="story__num">02 — ROUTE</span>
+              <span class="story__role"><img src="assets/img/persona-driver.jpg" alt="">Driver app · in-cab</span>
+              <h3>The stop lands on an optimized route.</h3>
+              <p class="lede">Drivers get one instruction and one action at a time — glanceable, gloved-hand friendly, and built for a moving cab.</p>
+              <ul><li><span data-i="check"></span>Turn-by-turn to the bin, not the curb</li><li><span data-i="check"></span>Road closures re-routed automatically</li><li><span data-i="check"></span>One-tap crew messaging</li></ul>
+              <div class="phone"><div class="mini" data-theme="dark" style="padding:0">
+                <div class="map" data-minimap style="position:absolute;inset:0;height:auto;border-radius:0"></div>
+                <div class="card mini-in" style="--d:0;position:relative;margin:44px 12px 0;padding:16px;border-radius:20px"><span data-i="arrow-up"></span><p class="t-sm" style="font-weight:700;margin-top:6px">Continue on Antonino St</p><p class="mini__big" style="font-size:24px;margin-top:4px">55 ft until Bin Collection Point</p></div>
+                <div class="card mini-in" style="--d:2;position:relative;margin:auto 0 0;border-radius:22px 22px 0 0;padding:16px;display:flex;flex-direction:column;gap:10px">
+                  <p class="t-sm" style="font-weight:700">Customer Pick Up Queue</p>
+                  <div class="row row--top" style="--gap:10px"><span class="f-num" style="width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:var(--primary-ink);font-weight:800;flex:none">3</span><div class="stack" style="--gap:6px"><p style="font-weight:800;font-size:17px">185 Antonino St</p><div class="row row--wrap" style="--gap:6px"><span class="chip chip--ok" data-ci="check">Ready for pick up</span><span class="chip chip--outline" data-ci="check">Standard Bin</span></div></div></div>
+                  <span class="btn btn--field btn--block"><span data-i="pin"></span>Arrived at stop</span>
+                </div>
+              </div></div>
+            </article>
+
+            <article class="story__step" data-step>
+              <span class="story__num">03 — COLLECT</span>
+              <span class="story__role"><img src="assets/img/persona-collector.jpg" alt="">Collector app · field</span>
+              <h3>Scanned, checked and photographed.</h3>
+              <p class="lede">Collectors verify the right bin by barcode, confirm compliance in four taps, and capture photo proof that goes straight to the customer.</p>
+              <ul><li><span data-i="check"></span>Barcode bin verification</li><li><span data-i="check"></span>Hazard and contamination flags</li><li><span data-i="check"></span>Rewards for compliant pickups</li></ul>
+              <div class="phone"><div class="mini" data-theme="dark">
+                <span class="chip chip--ok chip--lg mini-in" style="--d:0;align-self:flex-start" data-ci="check">Bin verified · CC-204347</span>
+                <p class="mini__big mini-in" style="--d:1">185 Antonino St</p>
+                <div class="card mini-in" style="--d:2;padding:8px 14px">
+                  <label class="check mini-check f-check-row" style="--d:0"><input type="checkbox" checked disabled><span class="check__box" data-i="check"></span>Correct bin for address</label>
+                  <label class="check mini-check f-check-row" style="--d:1"><input type="checkbox" checked disabled><span class="check__box" data-i="check"></span>No hazardous materials</label>
+                  <label class="check mini-check f-check-row" style="--d:2"><input type="checkbox" checked disabled><span class="check__box" data-i="check"></span>Recycling not contaminated</label>
+                  <label class="check mini-check f-check-row" style="--d:3"><input type="checkbox" checked disabled><span class="check__box" data-i="check"></span>Lid closed, bin returned</label>
+                </div>
+                <div class="mini-in" style="--d:4;border-radius:16px;overflow:hidden;flex:1;min-height:90px;position:relative"><img src="assets/img/house-bin.jpg" alt="" style="width:100%;height:100%;object-fit:cover"><span class="chip chip--ok" style="position:absolute;left:8px;bottom:8px" data-ci="camera">Photo proof</span></div>
+                <span class="btn btn--field btn--block btn--ok mini-in" style="--d:5"><span data-i="check"></span>Complete pickup</span>
+              </div></div>
+            </article>
+
+            <article class="story__step" data-step>
+              <span class="story__num">04 — OVERSEE</span>
+              <span class="story__role"><img src="assets/img/persona-fleet-manager.jpg" alt="">Fleet operations</span>
+              <h3>Everyone knows. Nothing slips.</h3>
+              <p class="lede">The customer gets a photo. The fleet dashboard ticks forward. And the manager sees tomorrow's risks — maintenance, certifications, delays — before they become today's problems.</p>
+              <ul><li><span data-i="check"></span>Risk-first dashboard, on any device</li><li><span data-i="check"></span>Live incident feed from the field</li><li><span data-i="check"></span>Maintenance scheduling by risk</li></ul>
+              <div class="phone"><div class="mini" data-theme="light">
+                <div class="toast mini-in" style="--d:0;position:relative;left:0;right:0;top:0;animation:none"><span data-i="check-circle"></span><span>Meredith: pickup complete · photo sent</span></div>
+                <p class="t-h3 mini-in" style="--d:1">Fleet overview</p>
+                <div class="mini-in" style="--d:2;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                  <div class="card metric" style="padding:12px"><span class="metric__label t-xs">Trucks out</span><span class="metric__value" style="font-size:26px">65</span></div>
+                  <div class="card metric" style="padding:12px"><span class="metric__label t-xs">On schedule</span><span class="metric__value" style="font-size:26px">94%</span></div>
+                </div>
+                <div class="card stack mini-in" style="--d:3;--gap:8px;padding:14px"><div class="row row--between"><p style="font-weight:800">Needs attention</p><span class="chip chip--danger-soft">3</span></div>
+                  <div class="fm-alert fm-alert--danger" style="padding:10px;border-left:4px solid var(--danger);border-radius:12px;background:var(--surface-2)"><p class="t-xs" style="font-weight:700">Truck 0047 · Brake service overdue</p></div>
+                  <div class="fm-alert" style="padding:10px;border-left:4px solid var(--warn);border-radius:12px;background:var(--surface-2)"><p class="t-xs" style="font-weight:700">3 collectors need recertification</p></div>
+                  <div style="padding:10px;border-left:4px solid var(--warn);border-radius:12px;background:var(--surface-2)"><p class="t-xs" style="font-weight:700">Seaport 12 min behind schedule</p></div>
+                </div>
+                <div class="card stack mini-in" style="--d:4;--gap:8px;padding:14px"><div class="row row--between t-xs"><strong>Truck 0091</strong><span class="chip chip--ok-soft" data-ci="check">On schedule</span></div><div class="progress progress--ok mini-fill"><span style="width:58%"></span></div></div>
+              </div></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec__head">
+          <span class="eyebrow" data-reveal>Outcomes</span>
+          <h2 class="h-xl" data-reveal style="--i:1">Fewer surprises. Faster routes. Proof on every pickup.</h2>
+        </div>
+        <div class="outcomes" data-reveal>
+          <div class="outcome"><strong>30<em>%</em></strong><span>fewer missed pickups*</span></div>
+          <div class="outcome"><strong>18<em>%</em></strong><span>less drive time per route*</span></div>
+          <div class="outcome"><strong>100<em>%</em></strong><span>of pickups photo-verified</span></div>
+          <div class="outcome"><strong><em>&lt;</em>2<em> min</em></strong><span>to book a pickup</span></div>
+        </div>
+        <p class="foot-note">*Design targets for the CoCo concept, derived from discovery research — not measured results.</p>
+      </div>
+    </section>
+
+    <!-- FEATURES / BENTO -->
+    <section class="sec" id="features" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec__head">
+          <span class="eyebrow" data-reveal>Features</span>
+          <h2 class="h-xl" data-reveal style="--i:1">Everything a pickup touches.</h2>
+        </div>
+        <div class="bento">
+          <div class="tile tile--dark tile--wide" data-reveal data-live>
+            <span class="chip chip--info" style="align-self:flex-start" data-ci="pin">Customer</span>
+            <h3>Live tracking customers can trust</h3>
+            <p>Stops-away and ETA from the crew's real progress — not a vague "sometime today" window.</p>
+            <div class="tile__vis"><div class="trk"><div class="trk__road"><span class="trk__pin" style="left:30%"></span><span class="trk__pin" style="left:52%"></span><span class="trk__pin" style="left:72%"></span><span class="trk__pin trk__pin--home"></span><span class="trk__truck" data-i="truck"></span></div><div class="trk__eta"><span><b>2 stops away</b><br>Crew en route</span><span style="text-align:right"><b>10:05</b><br>ETA</span></div></div></div>
+          </div>
+          <div class="tile" data-reveal style="--i:1" data-live>
+            <span class="chip chip--ok-soft" style="align-self:flex-start" data-ci="scan">Collector</span>
+            <h3>Barcode bin verification</h3>
+            <p>Every bin is tagged. A scan confirms the right pickup at the right address.</p>
+            <div class="tile__vis"><div class="bc"><div class="bc__code" data-barcode></div><i class="bc__laser"></i><span class="chip chip--ok bc__ok" data-ci="check">Verified</span></div></div>
+          </div>
+          <div class="tile" data-reveal data-live>
+            <span class="chip chip--ok-soft" style="align-self:flex-start" data-ci="shield-check">Compliance</span>
+            <h3>Compliance, built in</h3>
+            <p>Four checks, inside the pickup flow.</p>
+            <div class="tile__vis"><div class="cl"><div><span class="bx" style="--d:0" data-i="check"></span>Correct bin</div><div><span class="bx" style="--d:1" data-i="check"></span>No hazards</div><div><span class="bx" style="--d:2" data-i="check"></span>Not contaminated</div><div><span class="bx" style="--d:3" data-i="check"></span>Lid closed</div></div></div>
+          </div>
+          <div class="tile tile--blue" data-reveal style="--i:1" data-live>
+            <span class="chip" style="align-self:flex-start;background:rgb(255 255 255 / .2);color:#fff" data-ci="wrench">Fleet</span>
+            <h3>Maintenance before breakdowns</h3>
+            <p>Service risk ranked across the fleet, bookable in one tap.</p>
+            <div class="tile__vis"><div class="mt"><div><span>Truck 0091</span><span class="bar"><span style="--w:38%;--d:0"></span></span><em>420 mi</em></div><div class="warn"><span>Truck 0034</span><span class="bar"><span style="--w:82%;--d:1"></span></span><em>6 days</em></div><div><span>Truck 0068</span><span class="bar"><span style="--w:55%;--d:2"></span></span><em>9 days</em></div></div></div>
+          </div>
+          <div class="tile" data-reveal style="--i:2" data-live>
+            <span class="chip chip--info-soft" style="align-self:flex-start" data-ci="message">Crew</span>
+            <h3>Talk, don't type</h3>
+            <p>Quick replies and push-to-talk between driver, collector and dispatch.</p>
+            <div class="tile__vis"><div class="cm"><p style="--d:0">Bin's behind the side gate 👍</p><p class="me" style="--d:1">Pulling up now</p><p style="--d:2">Clear — go</p></div></div>
+          </div>
+          <div class="tile tile--wide" data-reveal data-live>
+            <span class="chip chip--ok-soft" style="align-self:flex-start" data-ci="camera">Proof</span>
+            <h3>Photo proof on every pickup</h3>
+            <p>Captured by the collector, delivered to the customer with a timestamp and compliance status — ending the "did they even come?" call.</p>
+            <div class="tile__vis"><div class="pp"><img src="assets/img/house-bin.jpg" alt="Photo proof of an emptied bin" loading="lazy"><span class="chip chip--ok" data-ci="check">Pick up complete · 10:12 AM</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROLES -->
+    <section class="sec" id="roles" style="background:var(--surface)">
+      <div class="wrap">
+        <div class="sec__head">
+          <span class="eyebrow" data-reveal>Solutions</span>
+          <h2 class="h-xl" data-reveal style="--i:1">Built for every seat.</h2>
+          <p class="lede" data-reveal style="--i:2">Each app is designed for its context — from a couch to a cab. All of them are mobile-first and live today.</p>
+        </div>
+        <div class="roles">
+          <a class="role" href="customer/#/welcome" data-reveal><img src="assets/img/persona-customer.jpg" alt="" loading="lazy"><span class="chip chip--info">iOS · Android · Web</span><h3>Customers</h3><p>Schedule, track and confirm pickups. Photo estimates, billing and reminders.</p><span class="role__go">Open customer app <span data-i="arrow-right"></span></span></a>
+          <a class="role" href="driver/" data-reveal style="--i:1"><img src="assets/img/persona-driver.jpg" alt="" loading="lazy"><span class="chip chip--info">In-cab tablet · phone</span><h3>Drivers</h3><p>Glanceable navigation, pre-trip checks, crew comms and vehicle health.</p><span class="role__go">Open driver app <span data-i="arrow-right"></span></span></a>
+          <a class="role" href="collector/" data-reveal style="--i:2"><img src="assets/img/persona-collector.jpg" alt="" loading="lazy"><span class="chip chip--info">Rugged phone</span><h3>Collectors</h3><p>Bin scanning, compliance checklists, problem flags and rewards.</p><span class="role__go">Open collector app <span data-i="arrow-right"></span></span></a>
+          <a class="role" href="fleet/" data-reveal style="--i:3"><img src="assets/img/persona-fleet-manager.jpg" alt="" loading="lazy"><span class="chip chip--info">Web · any device</span><h3>Fleet managers</h3><p>Risk-first overview, maintenance scheduling and a live incident feed.</p><span class="role__go">Open dashboard <span data-i="arrow-right"></span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHT -->
+    <section class="sec">
+      <div class="wrap">
+        <div class="insight" data-insight>
+          <div class="stack" style="--gap:16px">
+            <span class="eyebrow" style="color:var(--blue-400)">Designed from research</span>
+            <h2 class="h-lg">Field teams need <span style="color:var(--blue-400)">now</span>. Managers need <span style="color:var(--yellow-300)">tomorrow</span>.</h2>
+            <p class="lede">We asked every role to rank the features that matter. Pickup tracking came first for customers, collectors and drivers — and sixth for fleet managers, who care most about maintenance and compliance risk. So each CoCo app leads with a different view.</p>
+          </div>
+          <div class="bars">
+            <p class="t-xs" style="color:#9AA1AB;font-weight:700;letter-spacing:.08em;text-transform:uppercase">Rank of "pickup tracking & notifications"</p>
+            <div class="bars__row" style="--i:0"><span>Customers</span><span class="bars__track"><span style="--w:100%"></span></span><span class="bars__rank">#1</span></div>
+            <div class="bars__row" style="--i:1"><span>Collectors</span><span class="bars__track"><span style="--w:100%"></span></span><span class="bars__rank">#1</span></div>
+            <div class="bars__row" style="--i:2"><span>Drivers</span><span class="bars__track"><span style="--w:100%"></span></span><span class="bars__rank">#1</span></div>
+            <div class="bars__row bars__row--low" style="--i:3"><span>Fleet managers</span><span class="bars__track"><span style="--w:42%"></span></span><span class="bars__rank" style="color:var(--yellow-300)">#6</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="sec" style="padding-top:0">
+      <div class="wrap">
+        <div class="cta" data-cta>
+          <h2 data-reveal>Make every pickup visible.</h2>
+          <p data-reveal style="--i:1">Start service as a customer, or sign in to the driver, collector and fleet apps.</p>
+          <div class="cta__btns" data-reveal style="--i:2"><a class="btn btn--lg btn--white" href="customer/#/welcome">Get started</a><a class="btn btn--lg btn--glass" href="login/">Sign in</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__brand"><a class="logo" href="./"><span class="logo__mark">Co</span>CoCo</a><p class="t-sm t-muted">Combination Collection Services — the connected operations platform for waste collection.</p></div>
+        <div><h4>Platform</h4><a href="customer/#/welcome">Customer app</a><a href="driver/">Driver app</a><a href="collector/">Collector app</a><a href="fleet/">Fleet operations</a></div>
+        <div><h4>Product</h4><a href="#story">How it works</a><a href="#features">Features</a><a href="#roles">Solutions</a></div>
+        <div><h4>Account</h4><a href="login/">Sign in</a><a href="customer/#/welcome">Start service</a><a href="https://jonlanger.vercel.app/projects/coco">Case study</a></div>
+      </div>
+      <div class="foot__bottom"><span>© 2026 CoCo · A concept by Jon Langer</span><span>Made mobile-first</span></div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/home.js"></script>
+</body>
+</html>

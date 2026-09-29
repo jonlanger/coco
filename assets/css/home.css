@@ -86,7 +86,7 @@ body { background: var(--n-50); overflow-x: hidden; }
 .ops__tag { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 12px; background: rgb(20 22 27 / .82); backdrop-filter: blur(10px); font-size: 12px; font-weight: 700; border: 1px solid rgb(255 255 255 / .08); }
 .ops__tag i { width: 7px; height: 7px; border-radius: 50%; background: var(--green-400); box-shadow: 0 0 0 3px rgb(98 216 78 / .25); }
 .ops__count { text-align: right; }
-.ops__count strong { font-size: 1.5rem; font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.ops__count strong { font-size: 1.5rem; font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .ops__count small { display: block; font-size: 11px; color: #9AA1AB; font-weight: 600; }
 .ops__bar { width: 120px; height: 4px; border-radius: 4px; background: #2B2F36; margin-top: 6px; overflow: hidden; margin-left: auto; }
 .ops__bar span { display: block; height: 100%; background: var(--green-400); width: 0; transition: width .6s var(--slam); }
@@ -204,8 +204,8 @@ body { background: var(--n-50); overflow-x: hidden; }
 /* ---------- Outcomes ---------- */
 .outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border-radius: 28px; overflow: hidden; border: 1px solid var(--border); }
 .outcome { background: var(--surface); padding: 28px 20px; display: flex; flex-direction: column; gap: 8px; }
-.outcome strong { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -.05em; line-height: .95; font-variant-numeric: tabular-nums; }
-.outcome strong em { font-style: normal; color: var(--brand); }
+.outcome strong { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -.05em; line-height: .95; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.outcome strong em { font-style: normal; color: var(--brand); font-size: .5em; letter-spacing: -.02em; margin-left: .15em; }
 .outcome span { color: var(--text-2); font-weight: 600; font-size: var(--fs-sm); }
 .foot-note { margin-top: 16px; font-size: var(--fs-xs); color: var(--text-3); }
 @media (min-width: 900px) { .outcomes { grid-template-columns: repeat(4, 1fr); } .outcome { padding: 44px 32px; } }
